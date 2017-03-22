@@ -1,4 +1,6 @@
- # (leading space required for Xenix /bin/sh)
+#!/usr/bin/env sh
+
+# (leading space required for Xenix /bin/sh)
 
 #
 # Determine the type of *ix operating system that we're
@@ -9,20 +11,20 @@
 
 case `uname -s` in
 "FreeBSD")
-	PLATFORM="freebsd"
-	;;
+        PLATFORM="freebsd"
+        ;;
 "Linux")
-	PLATFORM="linux"
-	;;
+        PLATFORM="linux"
+        ;;
 "Darwin")
-	PLATFORM="macos"
-	;;
+        PLATFORM="macos"
+        ;;
 "SunOS")
-	PLATFORM="solaris"
-	;;
+        PLATFORM="solaris"
+        ;;
 *)
-	echo "Unknown platform" >&2
-	exit 1
+        echo "Unknown platform" >&2
+        exit 1
 esac
 echo $PLATFORM
 exit 0
